@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Form = (props) => {
+const Search = (props) => {
   return(
     <form>
       <input type="text" name="city" placeholder="CITY"/>
@@ -10,4 +10,4 @@ const Form = (props) => {
   )
 }
 
-export default Form
+export default Search

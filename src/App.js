@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 import Heading from './components/Heading'
-import Form from './components/Form'
+import Search from './components/Search'
 import apiConfig from './apiKeys';
 
 class App extends React.Component {
@@ -17,7 +17,7 @@ class App extends React.Component {
     return (
       <div>
         <Heading />
-        <Form />
+        <Search />
       </div>
     )
   }
