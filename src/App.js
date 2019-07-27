@@ -3,10 +3,10 @@ import React from 'react';
 import './App.css';
 import Heading from './components/Heading'
 import Search from './components/Search'
-// import apiConfig from './apiKeys';
+import apiConfig from './apiKeys';
 import Forecast from './components/Forecast'
 
-const api_key = "";
+const api_key = "4eaecf7e62383d8e2f34682cb1f0eb13";
 
 class App extends React.Component {
   state = {
@@ -23,7 +23,7 @@ class App extends React.Component {
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
     e.preventDefault();
-    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=imperial&appid=${api_key}`);
+    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=imperial&appid=${apiConfig.openweatherKey}`);
 
     const response = await api_call.json();
 
