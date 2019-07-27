@@ -6,7 +6,7 @@ import Search from './components/Search'
 // import apiConfig from './apiKeys';
 import Forecast from './components/Forecast'
 
-const api_key = "4eaecf7e62383d8e2f34682cb1f0eb13";
+const api_key = "";
 
 class App extends React.Component {
   state = {
