@@ -6,8 +6,6 @@ import Search from './components/Search'
 import apiConfig from './apiKeys';
 import Forecast from './components/Forecast'
 
-const api_key = "4eaecf7e62383d8e2f34682cb1f0eb13";
-
 class App extends React.Component {
   state = {
     tempertature: "",
@@ -17,7 +15,8 @@ class App extends React.Component {
     error: ""
   }
 
-
+//changes to be made to api: get a five day forecast at a specific UTC time
+//and search by zipcode (haven't been able to get it to work)
 
   getWeather = async (e) => {
     const city = e.target.elements.city.value;
@@ -27,7 +26,7 @@ class App extends React.Component {
 
     const response = await api_call.json();
 
-    if(city&&country){
+    if (city&&country) {
       this.setState({
         temperature: response.main.temp,
         city: response.name,
