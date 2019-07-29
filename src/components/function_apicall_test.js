@@ -4,7 +4,6 @@ import apiConfig from './apiKeys';
 function dailyWeather() {
   const [fullData, setFullData] = useState();
   const [dailyData, setDailyData] = useState();
-  const [errorMessage, setErrorMessage] = useState(undefined);
 
   useEffect(() => {
       const url =
