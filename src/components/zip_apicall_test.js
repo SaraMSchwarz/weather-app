@@ -1,7 +1,7 @@
 import React from 'react';
 import apiConfig from './apiKeys';
 
-class DailyWeather extends React.Compoment {
+class DailyWeather extends React.Component {
   state = {
     fullData: [],
     dailyData: []
@@ -21,5 +21,14 @@ class DailyWeather extends React.Compoment {
         }, () => console.log(this.state))
       })
     }
+
+    render() {
+    return (
+      <div>
+        <h1>Weekly Weather Forecast</h1>
+      </div>
+    )
+  }
+}
 
 export default DailyWeather;
