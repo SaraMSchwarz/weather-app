@@ -5,7 +5,8 @@ import DailyWeatherCard from './DailyWeatherCard'
 class AllWeather extends React.Component {
   state = {
     allData: [],
-    dailyData: []
+    dailyData: [],
+    zipCode: ''
   }
 
   componentDidMount = () => {
@@ -27,8 +28,10 @@ class AllWeather extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.formatDailyWeatherCard()}
+      <div className="container">
+        <div className="row justify-content-center">
+          {this.formatDailyWeatherCard()}
+        </div>
       </div>
     )
   }
