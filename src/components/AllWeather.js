@@ -1,5 +1,4 @@
 import React from 'react';
-// import apiConfig from '../apiKeys';
 import DailyWeatherCard from './DailyWeatherCard'
 
 const Api_Key = "4eaecf7e62383d8e2f34682cb1f0eb13";
