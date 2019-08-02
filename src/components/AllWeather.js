@@ -1,6 +1,8 @@
 import React from 'react';
-import apiConfig from '../apiKeys';
+// import apiConfig from '../apiKeys';
 import DailyWeatherCard from './DailyWeatherCard'
+
+const Api_Key = "4eaecf7e62383d8e2f34682cb1f0eb13";
 
 class AllWeather extends React.Component {
   state = {
@@ -9,8 +11,9 @@ class AllWeather extends React.Component {
     zipCode: ''
   }
 
+
   componentDidMount = () => {
-    const url = `http://api.openweathermap.org/data/2.5/forecast?zip=20176&units=imperial&APPID=${apiConfig.openweatherKey}`
+    const url = `http://api.openweathermap.org/data/2.5/forecast?zip=20176&units=imperial&APPID=${Api_Key}`
     fetch(url)
     .then(res => res.json())
     .then(data => {
