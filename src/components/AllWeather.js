@@ -35,8 +35,6 @@ class AllWeather extends React.Component {
     })
   }
 
-//api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}
-
   componentDidMount = () => {
     this.search('20176')
   }
