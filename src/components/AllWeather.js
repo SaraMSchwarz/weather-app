@@ -19,12 +19,11 @@ class AllWeather extends React.Component {
   handleSearch = e => {
   e.preventDefault();
   console.log('Weather for:', this.state.zipCode);
+  this.search(this.state.zipCode)
 }
 
-//api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}
-
-  componentDidMount = () => {
-    const url = `http://api.openweathermap.org/data/2.5/forecast?zip=20176&units=imperial&APPID=${Api_Key}`
+  search = (zipCode) => {
+    const url = `http://api.openweathermap.org/data/2.5/forecast?zip=${zipCode}&units=imperial&APPID=${Api_Key}`
     fetch(url)
     .then(res => res.json())
     .then(data => {
@@ -34,6 +33,12 @@ class AllWeather extends React.Component {
         dailyData: dailyData
       }, () => console.log(this.state))
     })
+  }
+
+//api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}
+
+  componentDidMount = () => {
+    this.search('20176')
   }
 
   formatDailyWeatherCard = () => {
@@ -56,6 +61,7 @@ class AllWeather extends React.Component {
             onClick={this.handleSearch}>search</button>
         </form>
       </div>
+
         <div className="row justify-content-center">
           {this.formatDailyWeatherCard()}
         </div>
