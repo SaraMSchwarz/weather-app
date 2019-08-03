@@ -16,6 +16,12 @@ class AllWeather extends React.Component {
     })
   }
 
+  handleSearch = e => {
+  e.preventDefault();
+  console.log('Weather for:', this.state.zipCode);
+}
+
+//api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}
 
   componentDidMount = () => {
     const url = `http://api.openweathermap.org/data/2.5/forecast?zip=20176&units=imperial&APPID=${Api_Key}`
@@ -37,14 +43,19 @@ class AllWeather extends React.Component {
   render() {
     return (
       <div className="container">
-      <input
-        type="text"
-        name="zipCode"
-        placeholder="ZIP CODE"
-        onChange={this.handleChange}
-        value={this.state.zipCode}
-      />
-      <button>Get Weather</button>
+        <div className="form-container">
+        <form onSubmit={this.handleSearch}>
+          <input
+            type="text"
+            value={this.state.zipCode}
+            name="searchBox"
+            id="searchBox"
+            placeholder="Enter Zipcode"
+            onChange={this.handleChange} />
+          <button
+            onClick={this.handleSearch}>search</button>
+        </form>
+      </div>
         <div className="row justify-content-center">
           {this.formatDailyWeatherCard()}
         </div>
