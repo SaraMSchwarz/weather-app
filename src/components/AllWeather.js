@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
 import DailyWeatherCard from './DailyWeatherCard'
+import './AllWeather.css'
 
-const Api_Key = "4eaecf7e62383d8e2f34682cb1f0eb13";
+const Api_Key = "4eaecf7e62383d8e2f34682cb1f0eb13"
 
 class AllWeather extends React.Component {
   state = {
@@ -47,23 +48,22 @@ class AllWeather extends React.Component {
     return (
       <div className="container">
         <div className="form-container">
-        <form onSubmit={this.handleSearch}>
-          <input
-            type="text"
-            value={this.state.zipCode}
-            name="searchBox"
-            id="searchBox"
-            placeholder="Enter Zipcode"
-            onChange={this.handleChange} />
-          <button
-            onClick={this.handleSearch}>search</button>
-        </form>
-      </div>
+          <form onSubmit={this.handleSearch}>
+            <input
+              type="text"
+              value={this.state.zipCode}
+              name="searchBox"
+              id="searchBox"
+              placeholder="Enter Zipcode"
+              onChange={this.handleChange} />
+            <button className="searchButton"
+              onClick={this.handleSearch}>search</button>
+          </form>
+        </div>
 
         <div className="row justify-content-center">
           {this.formatDailyWeatherCard()}
         </div>
-
       </div>
     )
   }

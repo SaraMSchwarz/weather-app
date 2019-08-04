@@ -9,7 +9,9 @@ class App extends React.Component {
 
     return (
       <div>
+      
         <Heading />
+
         <br />
         <AllWeather />
       </div>

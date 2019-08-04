@@ -1,6 +1,8 @@
 import React from 'react'
+import './DailyWeatherCard.css'
 
-const moment = require('moment');
+
+const moment = require('moment')
 
 const DailyWeatherCard = ({ reading }) => {
   let newDate = new Date();
