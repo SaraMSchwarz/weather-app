@@ -1,6 +1,6 @@
 import React from 'react'
 import DailyWeatherCard from './DailyWeatherCard'
-import './AllWeather.css'
+import '../css/AllWeather.css'
 
 const Api_Key = "4eaecf7e62383d8e2f34682cb1f0eb13"
 
