@@ -27,7 +27,7 @@ class AllWeather extends React.Component {
     fetch(url)
     .then(res => res.json())
     .then(data => {
-      const dailyData = data.list.filter(reading => reading.dt_txt.includes("21:00:00"))
+      const dailyData = data.list.filter(reading => reading.dt_txt.includes("18:00:00"))
       this.setState({
         allData: data.list,
         dailyData: dailyData
