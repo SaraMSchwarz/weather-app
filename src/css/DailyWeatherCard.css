@@ -1,7 +1,5 @@
-.card {
+.card-block {
   width:120%;
-}
-
-.col-sm-2 {
+  text-align: center;
   margin-top: 3rem;
 }

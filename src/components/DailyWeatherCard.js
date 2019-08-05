@@ -7,14 +7,20 @@ const DailyWeatherCard = ({ reading }) => {
   let newDate = new Date();
   const dayOfWeek = reading.dt * 1000
   newDate.setTime(dayOfWeek)
+  //
+  // <i class="wi wi-night-sleet"></i>
+  // <i class="owf owf-200"></i>
 
-const imgURL = `wi wi-${reading.weather[0].id} wi-5x`
+//   Use the condition code as class name prefixed with owf-
+// Class name sample owf-200
+// Icon sample <i class="owf owf-200"></i>
 
-// wi wi-night-sleet
+  const imgURL = `owf owf-${reading.weather[0].id} owf-5x`
+    // const imgURL = `wi wi-${reading.weather[0].id}`
 
   return (
     <div className="col-sm-2">
-      <div className="card">
+      <div className="card-block">
         <h3 className="card-title">{moment(newDate).format('dddd')}</h3>
         <p className="text-muted">{moment(newDate).format('MMMM Do, h:mm a')}</p>
         <i className={imgURL}></i>
