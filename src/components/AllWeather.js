@@ -48,16 +48,16 @@ class AllWeather extends React.Component {
     return (
       <div className="container">
         <div className="form-container">
-          <form onSubmit={this.handleSearch}>
+          <form  onSubmit={this.handleSearch}>
             <input
               type="text"
               value={this.state.zipCode}
               name="searchBox"
               id="searchBox"
-              placeholder="Enter Zipcode"
+              placeholder="Enter zipcode"
               onChange={this.handleChange} />
             <button className="searchButton"
-              onClick={this.handleSearch}>search</button>
+              onClick={this.handleSearch}><i className="fa fa-search"></i></button>
           </form>
         </div>
 

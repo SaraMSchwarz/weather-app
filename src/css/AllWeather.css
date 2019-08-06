@@ -3,10 +3,8 @@
   text-align: center;
 }
 
-.searchBox {
-
-}
 
 .searchButton {
-
+  background-color: #f8b62e;
+  border-color: #f8b62e;
 }
