@@ -24,7 +24,7 @@ class AllWeather extends React.Component {
 }
 
   search = (zipCode) => {
-    const url = `http://api.openweathermap.org/data/2.5/forecast?zip=${zipCode}&units=imperial&APPID=${Api_Key}`
+    const url = `https://api.openweathermap.org/data/2.5/forecast?zip=${zipCode}&units=imperial&APPID=${Api_Key}`
     fetch(url)
     .then(res => res.json())
     .then(data => {
