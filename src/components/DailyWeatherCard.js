@@ -21,10 +21,10 @@ const DailyWeatherCard = ({ reading }) => {
   return (
     <div className="col-sm-2">
       <div className="card-block">
-        <h3 className="card-title">{moment(newDate).format('dddd')}</h3>
-        <p className="text-muted">{moment(newDate).format('MMMM Do, h:mm a')}</p>
+        <h4 className="card-title">{moment(newDate).format('dddd')}</h4>
+        <p className="text-muted">{moment(newDate).format('MMM Do, h:mm a')}</p>
         <i className={imgURL}></i>
-        <h3>{Math.round(reading.main.temp)} °F</h3>
+        <h4>{Math.round(reading.main.temp)} °F</h4>
         <div className="card-body">
           <p className="card-text">{reading.weather[0].description}</p>
         </div>

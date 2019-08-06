@@ -1,11 +1,11 @@
 import React from 'react'
-import '../css/Heading.css';
+import '../css/Heading.css'
+import header from '../img/header.png'
 
 const Heading = (props) =>
 
     <div className="heading">
-      <h1>Five Day Weather Forecast</h1>
+      <img src={header} alt="header" />
     </div>
-
 
 export default Heading
